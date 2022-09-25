@@ -107,7 +107,7 @@
 		position: fixed;
 		display: flex;
 		justify-content: center;
-		font-size: 17pt;
+		font-size: min(17pt, 5vw);
 
 		nav {
 			display: flex;
