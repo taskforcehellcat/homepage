@@ -114,7 +114,7 @@
 			justify-content: center;
 			align-items: center;
 			gap: 2rem;
-			width: 50rem;
+			width: min(50rem, 90%);
 			height: 100%;
 			border-bottom-right-radius: 5rem;
 			border-bottom-left-radius: 5rem;
@@ -129,6 +129,7 @@
 
 			li {
 				display: inline-block;
+				white-space: nowrap;
 
 				&.currentpage::after {
 					content: '';
