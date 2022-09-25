@@ -2,7 +2,7 @@
 	"name": "tfhc-homepage",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "python ./src/lib/search/searchIndexUpdater.py & vite dev",
+		"dev": "vite dev",
 		"build": "vite build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
