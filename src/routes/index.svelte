@@ -29,7 +29,7 @@
 
 	<section id="home">
 		<video id="bg-video" autoplay muted loop height="100%" width="100%" style="">
-			<source src="https://giant.gfycat.com/BlankTheseHorseshoebat.webm" type="video/mp4" />
+			<source src="https://giant.gfycat.com/BlankTheseHorseshoebat.webm" poster="/images/hero.png" type="video/mp4" />
 			Error: Your browser does not support HTML5 video.
 		</video>
 		<img id="hero-text" class="noselect" alt="TASK FORCE HELLCAT" src="/images/hero-text.svg" />
