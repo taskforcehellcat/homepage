@@ -42,6 +42,7 @@
 	section#home {
 		background-image: url('/images/hero.png');
 		background-position-y: 70%;
+		background-attachment: fixed;
 
 		display: flex;
 		justify-content: center;
