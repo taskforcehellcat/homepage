@@ -52,10 +52,7 @@
 			font-size: 180pt;
 			color: #fff;
 			text-transform: uppercase;
-
-			img {
-				width: 100%;
-			}
+			width: 95rem;
 		}
 	}
 
