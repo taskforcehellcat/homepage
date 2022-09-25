@@ -28,7 +28,7 @@
 	</div>
 
 	<section id="home">
-		<video id="bg-video" autoplay muted loop height="100%" width="100%" style="">
+		<video id="bg-video" autoplay muted loop>
 			<source src="https://giant.gfycat.com/BlankTheseHorseshoebat.webm" poster="/images/hero.png" type="video/mp4" />
 			Error: Your browser does not support HTML5 video.
 		</video>
@@ -47,6 +47,7 @@
 		position: fixed;
 		z-index: -1;
 		object-fit: cover;
+		top: 0;
 	}
 
 	main::-webkit-scrollbar {
