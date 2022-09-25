@@ -1,38 +1,77 @@
 <script lang="ts">
+	let navbar: HTMLElement;
+	let navbox: HTMLElement;
+	let main;
+
+	function scrollHandler() {
+		console.log('scrolled');
+		if (main.scrollTop > 0) {
+			navbox.classList.add('scrolled');
+		} else {
+			navbox.classList.remove('scrolled');
+		}
+	}
 </script>
 
 <svelte:head>
 	<title>Home | Task Force Hellcat</title>
 </svelte:head>
 
-<nav>
-	<li class="currentpage"><a href="/">home</a></li>
-	<li><a href="#about">über uns</a></li>
-	<li><a href="https://wiki.taskforcehellcat.de/" target="_blank">wiki</a></li>
-	<li><a href="#join">beitritt</a></li>
-</nav>
+<main bind:this={main} on:scroll={() => scrollHandler()}>
+	<div id="navbar" bind:this={navbar}>
+		<nav bind:this={navbox}>
+			<li class="currentpage"><a href="#home">home</a></li>
+			<li><a href="#about">über uns</a></li>
+			<li><a href="https://wiki.taskforcehellcat.de/" target="_blank">wiki</a></li>
+			<li><a href="#join">beitritt</a></li>
+		</nav>
+	</div>
 
-<section id="home">
-	<img id="hero-text" class="noselect" alt="TASK FORCE HELLCAT" src="/images/hero-text.svg" />
-</section>
-<section id="about" />
-<section id="join" />
+	<section id="home">
+		<video id="bg-video" autoplay muted loop height="100%" width="100%" style="">
+			<source src="https://giant.gfycat.com/BlankTheseHorseshoebat.webm" type="video/mp4" />
+			Error: Your browser does not support HTML5 video.
+		</video>
+		<img id="hero-text" class="noselect" alt="TASK FORCE HELLCAT" src="/images/hero-text.svg" />
+	</section>
+	<section id="about" />
+	<section id="join" />
+</main>
 
 <style lang="scss">
-	:global(body::-webkit-scrollbar) {
+	:gloabl(body) {
+		overflow: hidden;
+	}
+
+	#bg-video {
+		position: fixed;
+		z-index: -1;
+		object-fit: cover;
+	}
+
+	main::-webkit-scrollbar {
 		display: none;
 	}
 
-	:global(body) {
+	main {
 		-ms-overflow-style: none;
 		scrollbar-width: none;
+
+		overflow-y: scroll;
+		overflow-x: hidden;
+		height: 100%;
 	}
 
 	section {
 		min-height: 100vh;
-		background-size: 100%;
+		background-size: cover;
 		background-repeat: no-repeat;
 		background-color: wheat;
+		background-position-x: 50%;
+
+		background-image: url('/images/hero.png');
+		background-position-y: 70%;
+		background-attachment: fixed;
 	}
 
 	section:nth-child(2n) {
@@ -40,9 +79,8 @@
 	}
 
 	section#home {
-		background-image: url('/images/hero.png');
-		background-position-y: 70%;
-		background-attachment: fixed;
+		background-image: none;
+		background-color: rgba(0, 0, 0, 0);
 
 		display: flex;
 		justify-content: center;
@@ -50,13 +88,15 @@
 
 		#hero-text {
 			font-size: 180pt;
-			color: #fff;
+			color: rgb(255, 255, 255);
 			text-transform: uppercase;
-			width: 95rem;
+			width: min(95rem, 90%);
+			opacity: 100;
+			transition: opacity 3s ease-in;
 		}
 	}
 
-	nav {
+	#navbar {
 		align-items: center;
 		height: 8rem;
 		width: 100%;
@@ -67,26 +107,44 @@
 		display: flex;
 		justify-content: center;
 		font-size: 17pt;
-		gap: 2rem;
 
-		li {
-			display: inline-block;
+		nav {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 2rem;
+			width: 50rem;
+			height: 100%;
+			border-bottom-right-radius: 5rem;
+			border-bottom-left-radius: 5rem;
+			transition: all 0.2s ease-in-out;
 
-			&.currentpage::after {
-				content: '';
-				display: block;
-				width: 100%;
-				height: 2px;
-				background-color: #fff;
-				margin-bottom: -2px;
+			&:global(.scrolled) {
+				background: rgba(255, 255, 255, 0.25);
+				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+				backdrop-filter: blur(4px);
+				-webkit-backdrop-filter: blur(9px);
 			}
 
-			a {
-				color: inherit;
-				text-decoration: none;
+			li {
+				display: inline-block;
 
-				&:hover {
-					opacity: 0.7;
+				&.currentpage::after {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 2px;
+					background-color: #fff;
+					margin-bottom: -2px;
+				}
+
+				a {
+					color: inherit;
+					text-decoration: none;
+
+					&:hover {
+						opacity: 0.7;
+					}
 				}
 			}
 		}
