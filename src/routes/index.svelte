@@ -29,10 +29,11 @@
 
 	<section id="home">
 		<video id="bg-video" autoplay muted loop>
-			<source src="https://giant.gfycat.com/BlankTheseHorseshoebat.webm" poster="/images/hero.png" type="video/mp4" />
+			<source src="/images/bg.mp4" poster="/images/hero.png" type="video/mp4" />
 			Error: Your browser does not support HTML5 video.
 		</video>
 		<img id="hero-text" class="noselect" alt="TASK FORCE HELLCAT" src="/images/hero-text.svg" />
+		<img id="hero-img" class="noselect" alt="" src="/images/soldier.png" />
 	</section>
 	<section id="about" />
 	<section id="join" />
@@ -67,16 +68,20 @@
 		min-height: 100vh;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-color: wheat;
+		background-color: #297e8f;
 		background-position-x: 50%;
 
-		background-image: url('/images/hero.png');
 		background-position-y: 70%;
 		background-attachment: fixed;
 	}
 
 	section:nth-child(2n) {
-		background-color: burlywood;
+		background-color: #1e5c68;
+	}
+
+	section:not(section#home) {
+		z-index: 10;
+		position: relative;
 	}
 
 	section#home {
@@ -94,6 +99,14 @@
 			width: min(95rem, 90%);
 			opacity: 100;
 			transition: opacity 3s ease-in;
+			transform: translate(0, -3rem);
+			z-index: 5;
+		}
+
+		#hero-img {
+			z-index: 4;
+			position: fixed;
+			transform: translate(-14%, 16%);
 		}
 	}
 
@@ -122,7 +135,7 @@
 
 			&:global(.scrolled) {
 				background: rgba(255, 255, 255, 0.25);
-				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+				box-shadow: 0 8px 32px 0 rgba(127, 127, 127, 0.37);
 				backdrop-filter: blur(4px);
 				-webkit-backdrop-filter: blur(9px);
 			}
