@@ -40,7 +40,7 @@
 </main>
 
 <style lang="scss">
-	:gloabl(body) {
+	:global(body) {
 		overflow: hidden;
 	}
 
