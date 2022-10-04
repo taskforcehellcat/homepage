@@ -199,11 +199,11 @@
 					background-color: #fff;
 					margin-bottom: -2px;
 					transition: width 2s ease-in-out;
-					animation: bla 0.5s;
+					animation: expandX 0.5s;
 					margin-inline: auto;
 				}
 
-				@keyframes bla {
+				@keyframes expandX {
 					0% {
 						width: 0.1rem;
 					}
