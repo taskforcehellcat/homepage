@@ -153,7 +153,7 @@
 			width: min(45rem, 100%);
 			place-self: center;
 			transform: translateX(-6rem);
-			width: min(45rem, 70%);
+			width: max(30rem, 40%);
 		}
 	}
 
