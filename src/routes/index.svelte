@@ -1,29 +1,60 @@
 <script lang="ts">
+	import { loop_guard } from 'svelte/internal';
+	import { onMount } from 'svelte';
+
 	let navbar: HTMLElement;
 	let navbox: HTMLElement;
 	let main;
+	var y;
 
 	function scrollHandler() {
-		console.log('scrolled');
 		if (main.scrollTop > 0) {
 			navbox.classList.add('scrolled');
 		} else {
 			navbox.classList.remove('scrolled');
 		}
 	}
+
+	onMount(() => {
+		const main = document.querySelector('main');
+		const sections = document.querySelectorAll('section');
+		const navLi = document.querySelectorAll('#navbar nav li');
+		let currentPage;
+		main.addEventListener('scroll', updateNav);
+
+		function updateNav() {
+			sections.forEach((section) => {
+				const sectionTop = section.offsetTop;
+				const sectionHeight = section.clientHeight;
+
+				if (main.scrollTop >= sectionTop - sectionHeight / 3) {
+					currentPage = section.getAttribute('id');
+					console.log(currentPage);
+				}
+			});
+
+			navLi.forEach((li) => {
+				console.log(li);
+				li.classList.remove('currentpage');
+				if (li.classList.contains(currentPage)) {
+					li.classList.add('currentpage');
+				}
+			});
+		}
+	});
 </script>
 
 <svelte:head>
 	<title>Home | Task Force Hellcat</title>
 </svelte:head>
 
-<main bind:this={main} on:scroll={() => scrollHandler()}>
+<main bind:this={main}>
 	<div id="navbar" bind:this={navbar}>
 		<nav bind:this={navbox}>
-			<li class="currentpage"><a href="#home">home</a></li>
-			<li><a href="#about">über uns</a></li>
-			<li><a href="https://wiki.taskforcehellcat.de/" target="_blank">wiki</a></li>
-			<li><a href="#join">beitritt</a></li>
+			<li class="home currentpage"><a href="#home">home</a></li>
+			<li class="about"><a href="#about">über uns</a></li>
+			<li class="wiki"><a href="https://wiki.taskforcehellcat.de/" target="_blank">wiki</a></li>
+			<li class="join"><a href="#join">beitritt</a></li>
 		</nav>
 	</div>
 
@@ -32,23 +63,19 @@
 			<source src="/images/bg.mp4" poster="/images/hero.png" type="video/mp4" />
 			Error: Your browser does not support HTML5 video.
 		</video>
-		<img id="hero-text" class="noselect" alt="TASK FORCE HELLCAT" src="/images/hero-text.svg" />
+		<div id="hero-text">
+			<img class="noselect reveal" alt="TASK FORCE HELLCAT" src="/images/hero-text.svg" />
+		</div>
 		<img id="hero-img" class="noselect" alt="" src="/images/soldier.png" />
 	</section>
 	<section id="about" />
+	<section id="wiki" />
 	<section id="join" />
 </main>
 
 <style lang="scss">
 	:global(body) {
 		overflow: hidden;
-	}
-
-	#bg-video {
-		position: fixed;
-		z-index: -1;
-		object-fit: cover;
-		top: 0;
 	}
 
 	main::-webkit-scrollbar {
@@ -84,29 +111,49 @@
 		position: relative;
 	}
 
+	section#about {
+		background: rgb(21, 64, 73);
+		background: linear-gradient(0deg, rgba(21, 64, 73, 1) 0%, rgba(21, 64, 73, 1) 90%, rgba(0, 0, 0, 1) 100%);
+	}
+
 	section#home {
 		background-image: none;
 		background-color: rgba(0, 0, 0, 0);
+		display: grid;
+		grid-template-columns: 1fr;
 
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		#bg-video,
+		#hero-text,
+		#hero-img {
+			grid-row-start: 1;
+			grid-column-start: 1;
+		}
+
+		#bg-video {
+			object-fit: cover;
+			width: 100%;
+			width: max(100rem, 100%);
+			pointer-events: none;
+		}
 
 		#hero-text {
+			z-index: 2;
 			font-size: 180pt;
 			color: rgb(255, 255, 255);
 			text-transform: uppercase;
-			width: min(95rem, 90%);
+			width: min(75rem, 85%);
 			opacity: 100;
 			transition: opacity 3s ease-in;
 			transform: translate(0, -3rem);
-			z-index: 5;
+			place-self: center;
 		}
 
 		#hero-img {
-			z-index: 4;
-			position: fixed;
-			transform: translate(-14%, 16%);
+			z-index: 1;
+			width: min(45rem, 100%);
+			place-self: center;
+			transform: translateX(-6rem);
+			width: max(30rem, 40%);
 		}
 	}
 
@@ -114,23 +161,23 @@
 		align-items: center;
 		height: 8rem;
 		width: 100%;
+
 		font-weight: 700;
 		text-transform: uppercase;
 		color: #fff;
 		position: fixed;
 		display: flex;
 		justify-content: center;
-		font-size: min(17pt, 5vw);
+		font-size: min(15pt, 5vw);
+		z-index: 100;
 
 		nav {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			gap: 2rem;
-			width: min(50rem, 90%);
+			width: 100%;
 			height: 100%;
-			border-bottom-right-radius: 5rem;
-			border-bottom-left-radius: 5rem;
 			transition: all 0.2s ease-in-out;
 
 			&:global(.scrolled) {
@@ -151,6 +198,18 @@
 					height: 2px;
 					background-color: #fff;
 					margin-bottom: -2px;
+					transition: width 2s ease-in-out;
+					animation: bla 0.5s;
+					margin-inline: auto;
+				}
+
+				@keyframes bla {
+					0% {
+						width: 0.1rem;
+					}
+					100% {
+						width: 100%;
+					}
 				}
 
 				a {
