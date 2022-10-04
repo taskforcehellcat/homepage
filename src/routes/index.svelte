@@ -19,6 +19,8 @@
 		const main = document.querySelector('main');
 		const sections = document.querySelectorAll('section');
 		const navLi = document.querySelectorAll('#navbar nav li');
+		let fadeElements = document.querySelectorAll('.fadeOut');
+
 		let currentPage;
 		main.addEventListener('scroll', updateNav);
 
@@ -29,17 +31,24 @@
 
 				if (main.scrollTop >= sectionTop - sectionHeight / 3) {
 					currentPage = section.getAttribute('id');
-					console.log(currentPage);
 				}
 			});
 
 			navLi.forEach((li) => {
-				console.log(li);
 				li.classList.remove('currentpage');
 				if (li.classList.contains(currentPage)) {
 					li.classList.add('currentpage');
 				}
 			});
+		}
+
+		fadeElements.forEach((element) => {
+			fadeOut(element);
+		});
+
+		function fadeOut(el) {
+			el.style.opacity = main.scrollTop / 100;
+			console.log(el);
 		}
 	});
 </script>
@@ -47,6 +56,8 @@
 <svelte:head>
 	<title>Home | Task Force Hellcat</title>
 </svelte:head>
+
+<svelte:window on:scroll={() => scrollHandler()} />
 
 <main bind:this={main}>
 	<div id="navbar" bind:this={navbar}>
@@ -64,9 +75,9 @@
 			Error: Your browser does not support HTML5 video.
 		</video>
 		<div id="hero-text">
-			<img class="noselect reveal" alt="TASK FORCE HELLCAT" src="/images/hero-text.svg" />
+			<img class="noselect" alt="TASK FORCE HELLCAT" src="/images/hero-text.svg" />
 		</div>
-		<img id="hero-img" class="noselect" alt="" src="/images/soldier.png" />
+		<img id="hero-img" class="noselect fadeOut" alt="" src="/images/soldier.png" />
 	</section>
 	<section id="about" />
 	<section id="wiki" />
@@ -154,6 +165,7 @@
 			place-self: center;
 			transform: translateX(-6rem);
 			width: max(30rem, 35%);
+			opacity: 1;
 		}
 	}
 
