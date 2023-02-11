@@ -113,7 +113,7 @@
 
 	section#about {
 		background: rgb(21, 64, 73);
-		background: linear-gradient(0deg, rgba(21, 64, 73, 1) 0%, rgba(21, 64, 73, 1) 90%, rgba(0, 0, 0, 1) 100%);
+		// background: linear-gradient(0deg, rgba(21, 64, 73, 1) 0%, rgba(21, 64, 73, 1) 90%, rgba(0, 0, 0, 1) 100%);
 	}
 
 	section#home {
@@ -134,6 +134,7 @@
 			width: 100%;
 			width: max(100rem, 100%);
 			pointer-events: none;
+			position: fixed;
 		}
 
 		#hero-text {
@@ -154,6 +155,7 @@
 			place-self: center;
 			transform: translateX(-6rem);
 			width: max(30rem, 35%);
+			position: fixed;
 		}
 	}
 
