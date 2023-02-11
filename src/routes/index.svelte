@@ -59,8 +59,8 @@
 	</div>
 
 	<section id="home">
-		<video id="bg-video" autoplay muted loop>
-			<source src="/images/bg.mp4" poster="/images/hero.png" type="video/mp4" />
+		<video id="bg-video" poster="/images/hero.png" autoplay muted loop>
+			<source src="/images/bg.mp4" type="video/mp4" />
 			Error: Your browser does not support HTML5 video.
 		</video>
 		<div id="hero-text">
