@@ -156,6 +156,7 @@
 			transform: translateX(-6rem);
 			width: max(30rem, 35%);
 			position: fixed;
+			pointer-events: none;
 		}
 	}
 
