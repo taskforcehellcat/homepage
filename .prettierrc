@@ -1,14 +1,14 @@
 {
-	"useTabs": false,
-	"singleQuote": true,
-	"trailingComma": "none",
-	"printWidth": 110,
-	"overrides": [
-		{
-			"files": ["*.svelte"],
-			"options": {
-				"svelteBracketNewLine": true
-			}
-		}
-	]
+  "useTabs": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "printWidth": 110,
+  "overrides": [
+    {
+      "files": ["*.svelte"],
+      "options": {
+        "svelteBracketNewLine": true
+      }
+    }
+  ]
 }
