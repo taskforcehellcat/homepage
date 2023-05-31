@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { loop_guard } from 'svelte/internal';
 	import { onMount } from 'svelte';
 
 	let navbar: HTMLElement;
