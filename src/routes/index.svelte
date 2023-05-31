@@ -62,12 +62,20 @@
 			<source src="/images/bg.mp4" type="video/mp4" />
 			Error: Your browser does not support HTML5 video.
 		</video>
-		<div id="hero-text">
-			<img class="noselect reveal" alt="TASK FORCE HELLCAT" src="/images/hero-text.svg" />
-		</div>
-		<img id="hero-img" class="noselect" alt="" src="/images/soldier.png" />
+		<img id="hero-text" class="noselect reveal" alt="TASK FORCE HELLCAT" src="/images/hero-text.svg" />
 	</section>
-	<section id="about" />
+	<section id="about">
+		<div id="barbed-wire" />
+		<div class="content">
+			<p>
+				Die Task Force Hellcat ist eine 2021 gegründete Einheit, die Milsim in der von Bohemia Interactive
+				entwickelten Militärsimulation Arma 3 spielt. Innerhalb des Spiels wird ein besonderer Wert auf
+				Strategie, Immersion und einen gemeinschaftlichen Umgang gesetzt. Zur Steigerung der Immersion und des
+				Realismus benutzen wir Modifikationen wie ACE3, ACRE2 und KAT.
+			</p>
+			<img src="/images/m90.png" alt="Swedish M90 Soldier" class="img-right" />
+		</div>
+	</section>
 	<section id="wiki" />
 	<section id="join" />
 </main>
@@ -75,6 +83,10 @@
 <style lang="scss">
 	:global(body) {
 		overflow: hidden;
+		color: #fff;
+		font-family: 'GeneralSans-Variable', serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+			'Open Sans', 'Helvetica Neue', sans-serif;
+		scroll-behavior: smooth;
 	}
 
 	main::-webkit-scrollbar {
@@ -84,78 +96,91 @@
 	main {
 		-ms-overflow-style: none;
 		scrollbar-width: none;
-
 		overflow-y: scroll;
 		overflow-x: hidden;
 		height: 100%;
+		font-family: 'GeneralSans-Variable';
 	}
 
 	section {
 		min-height: 100vh;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-color: #297e8f;
-		background-position-x: 50%;
+		font-size: 16pt;
+		font-weight: 330;
+		line-height: 2;
+		letter-spacing: 0.1rem;
 
-		background-position-y: 70%;
-		background-attachment: fixed;
-	}
+		p {
+			text-align: justify;
+			text-justify: inter-character;
+			max-width: 60rem;
+			font-weight: 200;
+			word-spacing: -1px;
+		}
 
-	section:nth-child(2n) {
-		background-color: #1e5c68;
-	}
+		img:not(#hero-text) {
+			max-width: 400px;
+			box-shadow: 86px 86px 18px -76px rgba(0, 0, 0, 0.25);
+		}
 
-	section:not(section#home) {
-		z-index: 10;
-		position: relative;
+		.content {
+			width: min(100%, 150rem);
+			padding-inline: 21rem;
+			padding-block: 8rem;
+			justify-content: space-between;
+			height: 90%;
+			margin-inline: auto;
+			line-height: 4rem;
+			display: flex;
+			gap: 5rem;
+			flex-wrap: wrap;
+
+			@media screen and (max-width: 1020px) {
+				padding-inline: 5rem;
+			}
+		}
 	}
 
 	section#about {
-		background: rgb(21, 64, 73);
+		background: #012d47;
 		// background: linear-gradient(0deg, rgba(21, 64, 73, 1) 0%, rgba(21, 64, 73, 1) 90%, rgba(0, 0, 0, 1) 100%);
+
+		#barbed-wire {
+			--height: 10rem;
+			width: 100%;
+			// background-color: lime;
+			height: var(--height);
+			transform: translateY(-50%);
+			background-image: url('/images/barbed-wire.svg');
+			background-position-x: 4rem;
+		}
 	}
 
 	section#home {
 		background-image: none;
 		background-color: rgba(0, 0, 0, 0);
 		display: grid;
-		grid-template-columns: 1fr;
+		place-items: center;
+		height: 100vh;
 
 		#bg-video,
-		#hero-text,
-		#hero-img {
+		#hero-text {
 			grid-row-start: 1;
 			grid-column-start: 1;
 		}
 
 		#bg-video {
 			object-fit: cover;
-			width: 100%;
-			width: max(100rem, 100%);
+			width: min(100%, 1920px);
+			height: 100vh;
 			pointer-events: none;
-			position: fixed;
+			position: relative;
 		}
 
 		#hero-text {
-			z-index: 2;
-			font-size: 180pt;
-			color: rgb(255, 255, 255);
-			text-transform: uppercase;
-			width: min(75rem, 85%);
-			opacity: 100;
-			transition: opacity 3s ease-in;
-			transform: translate(0, -3rem);
-			place-self: center;
-		}
-
-		#hero-img {
-			z-index: 1;
-			width: min(45rem, 100%);
-			place-self: center;
-			transform: translateX(-6rem);
-			width: max(30rem, 35%);
-			position: fixed;
+			height: fit-content;
+			width: min(80rem, 100%);
 			pointer-events: none;
+			z-index: 100;
 		}
 	}
 
@@ -163,8 +188,7 @@
 		align-items: center;
 		height: 8rem;
 		width: 100%;
-
-		font-weight: 700;
+		font-weight: 600;
 		text-transform: uppercase;
 		color: #fff;
 		position: fixed;
@@ -172,6 +196,13 @@
 		justify-content: center;
 		font-size: min(15pt, 5vw);
 		z-index: 100;
+
+		:global(&[data-scrolled='true']) {
+			background: rgba(255, 255, 255, 0.25);
+			box-shadow: 0 8px 32px 0 rgba(127, 127, 127, 0.37);
+			backdrop-filter: blur(4px);
+			-webkit-backdrop-filter: blur(9px);
+		}
 
 		nav {
 			display: flex;
