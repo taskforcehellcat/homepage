@@ -67,12 +67,15 @@
 	<section id="about">
 		<div id="barbed-wire" />
 		<div class="content">
-			<p>
-				Die Task Force Hellcat ist eine 2021 gegründete Einheit, die Milsim in der von Bohemia Interactive
-				entwickelten Militärsimulation Arma 3 spielt. Innerhalb des Spiels wird ein besonderer Wert auf
-				Strategie, Immersion und einen gemeinschaftlichen Umgang gesetzt. Zur Steigerung der Immersion und des
-				Realismus benutzen wir Modifikationen wie ACE3, ACRE2 und KAT.
-			</p>
+			<div class="text-block">
+				<h2>Über uns</h2>
+				<p>
+					Die Task Force Hellcat ist eine 2021 gegründete Einheit, die Milsim in der von Bohemia Interactive
+					entwickelten Militärsimulation Arma 3 spielt. Innerhalb des Spiels wird ein besonderer Wert auf
+					Strategie, Immersion und einen gemeinschaftlichen Umgang gesetzt. Zur Steigerung der Immersion und
+					des Realismus benutzen wir Modifikationen wie ACE3, ACRE2 und KAT.
+				</p>
+			</div>
 			<img src="/images/m90.png" alt="Swedish M90 Soldier" class="img-right" />
 		</div>
 	</section>
@@ -141,6 +144,18 @@
 
 			@media screen and (max-width: 1020px) {
 				padding-inline: 5rem;
+			}
+
+			h1,
+			h2 {
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+
+			.text-block {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
 			}
 		}
 	}
