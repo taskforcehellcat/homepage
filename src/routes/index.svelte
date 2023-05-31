@@ -183,7 +183,7 @@
 
 		#hero-text {
 			height: fit-content;
-			width: min(80rem, 100%);
+			width: min(80rem, 90%);
 			pointer-events: none;
 			z-index: 100;
 		}
