@@ -115,6 +115,11 @@
 			max-width: 60rem;
 			font-weight: 200;
 			word-spacing: -1px;
+
+			@media screen and (max-width: 1020px) {
+				text-align: unset;
+				text-justify: unset;
+			}
 		}
 
 		img:not(#hero-text) {
