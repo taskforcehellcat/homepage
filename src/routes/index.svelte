@@ -29,12 +29,12 @@
 
 				if (main.scrollTop >= sectionTop - sectionHeight / 3) {
 					currentPage = section.getAttribute('id');
-					console.log(currentPage);
+					// console.log(currentPage);
 				}
 			});
 
 			navLi.forEach((li) => {
-				console.log(li);
+				// console.log(li);
 				li.classList.remove('currentpage');
 				if (li.classList.contains(currentPage)) {
 					li.classList.add('currentpage');
