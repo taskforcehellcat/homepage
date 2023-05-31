@@ -118,7 +118,7 @@
 		}
 
 		img:not(#hero-text) {
-			max-width: 400px;
+			width: min(100%, 400px);
 			box-shadow: 86px 86px 18px -76px rgba(0, 0, 0, 0.25);
 		}
 
