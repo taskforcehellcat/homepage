@@ -111,6 +111,12 @@
     font-weight: 330;
     line-height: 2;
     letter-spacing: 0.1rem;
+    background: #012d47;
+    // background: linear-gradient(0deg, rgba(21, 64, 73, 1) 0%, rgba(21, 64, 73, 1) 90%, rgba(0, 0, 0, 1) 100%);
+
+    &:nth-child(even) {
+      background-color: #001f31;
+    }
 
     p {
       text-align: justify;
@@ -161,8 +167,6 @@
   }
 
   section#about {
-    background: #012d47;
-    // background: linear-gradient(0deg, rgba(21, 64, 73, 1) 0%, rgba(21, 64, 73, 1) 90%, rgba(0, 0, 0, 1) 100%);
 
     #barbed-wire {
       --height: 10rem;
