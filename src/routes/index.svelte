@@ -53,7 +53,7 @@
       <li class="home currentpage"><a href="#home">home</a></li>
       <li class="about"><a href="#about">über uns</a></li>
       <li class="wiki"><a href="#wiki">wiki</a></li>
-      <li class="join"><a href="#join">beitritt</a></li>
+      <li class="join"><a href="#join">kontakt</a></li>
     </nav>
   </div>
 
