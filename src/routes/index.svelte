@@ -117,6 +117,12 @@
       />
     </div>
   </section>
+
+  <footer>
+    <span>© 2023 Task Force Hellcat</span>
+    &dash;
+    <a href="/impressum">Impressum</a>
+  </footer>
 </main>
 
 <style lang="scss">
@@ -124,6 +130,22 @@
     overflow: hidden;
     color: #fff;
     scroll-behavior: smooth;
+  }
+
+  footer {
+    width: 100%;
+    height: 15rem;
+    background-color: #001f31;
+    color: #d6d6d6;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    font-size: 14pt;
+
+    a {
+      color: inherit;
+    }
   }
 
   main::-webkit-scrollbar {
