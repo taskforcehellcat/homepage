@@ -221,7 +221,7 @@
 
     p {
       text-align: justify;
-      text-justify: inter-character;
+      text-align-last: left;
       max-width: 60rem;
       font-weight: 200;
       word-spacing: -1px;
