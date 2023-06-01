@@ -266,6 +266,11 @@
       width: min(80rem, 90%);
       pointer-events: none;
       z-index: 100;
+      margin-top: -8rem;
+
+      @media screen and (max-height: 600px) {
+        margin-top: 0;
+      }
     }
   }
 
