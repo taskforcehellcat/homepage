@@ -152,6 +152,41 @@
     }
   }
 
+  a {
+    color: inherit;
+    text-decoration: inherit;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  button {
+    cursor: pointer;
+    font-size: 14pt;
+    margin: 0;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #212325;
+    border-radius: 4px;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.04);
+    transition: opacity 0.15s ease-out;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
   .drop-shadow {
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.3));
   }
