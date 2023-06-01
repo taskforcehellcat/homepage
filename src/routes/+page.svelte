@@ -89,11 +89,10 @@
       <div class="text-block">
         <h2>Wiki</h2>
         <p>
-          Unser umfangreiches Wiki bietet eine Vielzahl von Informationen, darunter detaillierte Profile
-          zu den verschiedenen Rollen unserer Einheit, Ausbildungsinhalte, taktische Konzepte und
-          vieles mehr. Egal, ob du ein neues Mitglied bist, das sich mit den Grundlagen vertraut machen
-          möchte, oder ein erfahrener Spieler, der sein Wissen erweitern möchte - unser Wiki ist die zentrale
-          Anlaufstelle für alles, was du über unsere Einheit und unserern Spielstil wissen möchtest.
+          Als handliches Nachschlagewerk dient unser Einheitswiki. 
+          Hier lassen sich eine Vielzahl von Informationen zum Aufbau unserer Einheit, 
+          ihren diversen Rollen, den jeweiligen Ausbildungsinhalten, aber auch das 
+          gesamte benötigte Grundwissen nachlesen.
         </p>
         <a href="https://wiki.taskforcehellcat.de/"><button>Zum Wiki</button></a>
       </div>
