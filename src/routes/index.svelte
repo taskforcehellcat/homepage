@@ -139,7 +139,7 @@
     .content {
       width: min(100%, 150rem);
       padding-inline: 21rem;
-      padding-block: 8rem;
+      padding-block: 17rem;
       justify-content: space-between;
       height: 90%;
       margin-inline: auto;
@@ -167,6 +167,9 @@
   }
 
   section#about {
+    .content {
+      padding-block: 6rem;
+    }
 
     #barbed-wire {
       --height: 10rem;
