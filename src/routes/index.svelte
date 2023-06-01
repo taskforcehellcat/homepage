@@ -47,6 +47,7 @@
 
 <svelte:head>
   <title>Home | Task Force Hellcat</title>
+  <meta name="description" content="Homepage der Arma Unit 'Task Force Hellcat'."/>
 </svelte:head>
 
 <main bind:this={main}>
