@@ -78,12 +78,12 @@
           des Realismus benutzen wir Modifikationen wie ACE3, ACRE2 und KAT.
         </p>
       </div>
-      <img src="/images/m90.png" alt="Swedish M90 Soldier" />
+      <img src="/images/m90.png" class="drop-shadow" alt="Swedish M90 Soldier" />
     </div>
   </section>
   <section id="wiki">
     <div class="content">
-      <img src="/images/wiki.png" alt="Swedish M90 Soldier" />
+      <img src="/images/wiki.png" class="drop-shadow" alt="Swedish M90 Soldier" />
       <div class="text-block">
         <h2>Wiki</h2>
         <p>
@@ -111,6 +111,7 @@
       <iframe
         src="https://discord.com/widget?id=629333468299526164&theme=dark"
         title="Discord Widget"
+        class="drop-shadow"
         width="400"
         height="522"
         allowtransparency="true"
@@ -148,6 +149,10 @@
     a {
       color: inherit;
     }
+  }
+
+  .drop-shadow {
+    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.3));
   }
 
   main::-webkit-scrollbar {
@@ -191,7 +196,6 @@
 
     img:not(#hero-text) {
       width: min(100%, 400px);
-      box-shadow: 86px 86px 18px -76px rgba(0, 0, 0, 0.25);
     }
 
     .content {
