@@ -4,21 +4,14 @@
   let navbar: HTMLElement;
   let navbox: HTMLElement;
   let main;
-  var y;
-
-  function scrollHandler() {
-    if (main.scrollTop > 0) {
-      navbox.classList.add('scrolled');
-    } else {
-      navbox.classList.remove('scrolled');
-    }
-  }
+  let currentPage;
+  let isScrolled = false;
 
   onMount(() => {
-    const main = document.querySelector('main');
+    main = document.querySelector('main');
     const sections = document.querySelectorAll('section');
     const navLi = document.querySelectorAll('#navbar nav li');
-    let currentPage;
+
     main.addEventListener('scroll', updateNav);
 
     function updateNav() {
@@ -28,17 +21,26 @@
 
         if (main.scrollTop >= sectionTop - sectionHeight / 3) {
           currentPage = section.getAttribute('id');
-          // console.log(currentPage);
         }
       });
 
       navLi.forEach((li) => {
-        // console.log(li);
         li.classList.remove('currentpage');
         if (li.classList.contains(currentPage)) {
           li.classList.add('currentpage');
         }
       });
+
+      // Check if main.scrollTop is greater than 0 to determine if scrolled
+      const isMainScrolled = main.scrollTop > 0;
+
+      if (isMainScrolled && !isScrolled) {
+        navbox.classList.add('scrolled');
+        isScrolled = true;
+      } else if (!isMainScrolled && isScrolled) {
+        navbox.classList.remove('scrolled');
+        isScrolled = false;
+      }
     }
   });
 </script>
@@ -272,6 +274,7 @@
     height: 8rem;
     width: 100%;
     font-weight: 600;
+    margin-inline: auto;
     text-transform: uppercase;
     color: #fff;
     position: fixed;
@@ -279,13 +282,6 @@
     justify-content: center;
     font-size: min(15pt, 5vw);
     z-index: 100;
-
-    :global(&[data-scrolled='true']) {
-      background: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 8px 32px 0 rgba(127, 127, 127, 0.37);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(9px);
-    }
 
     nav {
       display: flex;
@@ -295,12 +291,11 @@
       width: 100%;
       height: 100%;
       transition: all 0.2s ease-in-out;
+      width: fit-content;
+      padding-inline: 3rem;
 
       &:global(.scrolled) {
-        background: rgba(255, 255, 255, 0.25);
-        box-shadow: 0 8px 32px 0 rgba(127, 127, 127, 0.37);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(9px);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.6));
       }
 
       li {
