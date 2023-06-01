@@ -282,7 +282,7 @@
 
   section#home {
     background-image: none;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgb(0, 0, 0);
     display: grid;
     place-items: center;
     height: 100vh;
