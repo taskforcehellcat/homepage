@@ -76,11 +76,47 @@
           des Realismus benutzen wir Modifikationen wie ACE3, ACRE2 und KAT.
         </p>
       </div>
-      <img src="/images/m90.png" alt="Swedish M90 Soldier" class="img-right" />
+      <img src="/images/m90.png" alt="Swedish M90 Soldier" />
     </div>
   </section>
-  <section id="wiki" />
-  <section id="join" />
+  <section id="wiki">
+    <div class="content">
+      <img src="/images/wiki.png" alt="Swedish M90 Soldier" />
+      <div class="text-block">
+        <h2>Wiki</h2>
+        <p>
+          Unser umfangreiches Wiki bietet eine Vielzahl von Informationen, darunter detaillierte Erklärungen
+          zu den verschiedenen Rollen in der Task Force Hellcat, Schulungsmaterialien, taktische Konzepte und
+          vieles mehr. Egal, ob du ein neues Mitglied bist, das sich mit den Grundlagen vertraut machen
+          möchte, oder ein erfahrener Spieler, der sein Wissen erweitern möchte - unser Wiki ist die zentrale
+          Anlaufstelle für alles, was du über unsere Einheit und unserern Spielstil wissen möchtest.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="content">
+      <div class="text-block">
+        <h2>Kontakt</h2>
+        <p>
+          Möchtest du mehr über die Task Force Hellcat erfahren oder Teil unserer Einheit werden? Trete
+          unserem Discord-Server bei, um mit uns in Kontakt zu treten und dich mit uns auszutauschen. Wir
+          freuen uns darauf, von dir zu hören und dich in unserer Unit willkommen zu heißen! Benutze die
+          Schaltfläche rechts, um unserem Discord-Server beizutreten.
+        </p>
+      </div>
+      <iframe
+        src="https://discord.com/widget?id=629333468299526164&theme=dark"
+        title="Discord Widget"
+        width="400"
+        height="522"
+        allowtransparency="true"
+        frameborder="0"
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+      />
+    </div>
+  </section>
 </main>
 
 <style lang="scss">
