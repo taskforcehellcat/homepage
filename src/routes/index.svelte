@@ -93,6 +93,7 @@
           möchte, oder ein erfahrener Spieler, der sein Wissen erweitern möchte - unser Wiki ist die zentrale
           Anlaufstelle für alles, was du über unsere Einheit und unserern Spielstil wissen möchtest.
         </p>
+        <a href="https://wiki.taskforcehellcat.de/"><button>Zum Wiki</button></a>
       </div>
     </div>
   </section>
@@ -275,6 +276,12 @@
       @media screen and (max-height: 600px) {
         margin-top: 0;
       }
+    }
+  }
+
+  section#wiki {
+    a {
+      margin-top: 1rem;
     }
   }
 
