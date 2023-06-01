@@ -73,10 +73,11 @@
       <div class="text-block">
         <h2>Über uns</h2>
         <p>
-          Die Task Force Hellcat ist eine 2021 gegründete Einheit, die Milsim in der von Bohemia Interactive
-          entwickelten Militärsimulation Arma 3 spielt. Innerhalb des Spiels wird ein besonderer Wert auf
-          Strategie, Immersion und einen gemeinschaftlichen Umgang gesetzt. Zur Steigerung der Immersion und
-          des Realismus benutzen wir Modifikationen wie ACE3, ACRE2 und KAT.
+          Wir sind eine 2021 gegründete Einheit, die Milsim in der von Bohemia Interactive
+          enwtickelten Militärsimulation Arma 3 spielt. Innerhalb des Spiels legen wir einen
+          besonderen Wert auf Strategie, Immersion und einen gemeinschaftlichen Umgang.
+          Zur Steigerung der Immersion und des Realismus setzen wir Modifikationen wie ACE3,
+          ACRE2, KAT und ALiVE ein.
         </p>
       </div>
       <img src="/images/m90.png" class="drop-shadow" alt="Swedish M90 Soldier" />
@@ -88,8 +89,8 @@
       <div class="text-block">
         <h2>Wiki</h2>
         <p>
-          Unser umfangreiches Wiki bietet eine Vielzahl von Informationen, darunter detaillierte Erklärungen
-          zu den verschiedenen Rollen in der Task Force Hellcat, Schulungsmaterialien, taktische Konzepte und
+          Unser umfangreiches Wiki bietet eine Vielzahl von Informationen, darunter detaillierte Profile
+          zu den verschiedenen Rollen unserer Einheit, Ausbildungsinhalte, taktische Konzepte und
           vieles mehr. Egal, ob du ein neues Mitglied bist, das sich mit den Grundlagen vertraut machen
           möchte, oder ein erfahrener Spieler, der sein Wissen erweitern möchte - unser Wiki ist die zentrale
           Anlaufstelle für alles, was du über unsere Einheit und unserern Spielstil wissen möchtest.
@@ -104,10 +105,10 @@
       <div class="text-block">
         <h2>Kontakt</h2>
         <p>
-          Möchtest du mehr über die Task Force Hellcat erfahren oder Teil unserer Einheit werden? Trete
-          unserem Discord-Server bei, um mit uns in Kontakt zu treten und dich mit uns auszutauschen. Wir
-          freuen uns darauf, von dir zu hören und dich in unserer Unit willkommen zu heißen! Benutze die
-          Schaltfläche rechts, um unserem Discord-Server beizutreten.
+          Du möchtest mehr über uns erfahren oder Teil unserer Einheit werden? Trete unserem Discord-Server bei,
+          um mit uns in Kontakt zu treten und dich mit uns auszutauschen. Wir freuen uns darauf, von dir zu hören
+          und dich auf unserem Discord-Server willkommen zu heißen!
+          Benutze die Schaltfläche rechts, um unseren Discord-Server beizutreten.
         </p>
       </div>
       <iframe
