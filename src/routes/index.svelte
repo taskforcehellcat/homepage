@@ -123,8 +123,6 @@
   :global(body) {
     overflow: hidden;
     color: #fff;
-    font-family: 'GeneralSans-Variable', serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      'Open Sans', 'Helvetica Neue', sans-serif;
     scroll-behavior: smooth;
   }
 
