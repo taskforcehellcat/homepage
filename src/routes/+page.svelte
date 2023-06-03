@@ -3,28 +3,29 @@
 
   let navbar: HTMLElement;
   let navbox: HTMLElement;
-  let main;
-  let currentPage;
+  let main: HTMLElement;
+  let currentPage: string;
   let isScrolled = false;
 
   onMount(() => {
-    main = document.querySelector('main');
+    main = document.querySelector('main')!;
     const sections = document.querySelectorAll('section');
-    const navLi = document.querySelectorAll('#navbar nav li');
+    const navLi: NodeListOf<HTMLElement> =
+      document.querySelectorAll('#navbar nav li');
 
     main.addEventListener('scroll', updateNav);
 
     function updateNav() {
-      sections.forEach((section) => {
+      sections.forEach((section: HTMLElement) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
 
         if (main.scrollTop >= sectionTop - sectionHeight / 3) {
-          currentPage = section.getAttribute('id');
+          currentPage = section.getAttribute('id')!;
         }
       });
 
-      navLi.forEach((li) => {
+      navLi.forEach((li: HTMLElement) => {
         li.classList.remove('currentpage');
         if (li.classList.contains(currentPage)) {
           li.classList.add('currentpage');
