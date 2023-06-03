@@ -47,7 +47,10 @@
 
 <svelte:head>
   <title>Home | Task Force Hellcat</title>
-  <meta name="description" content="Homepage der Arma Unit 'Task Force Hellcat'."/>
+  <meta
+    name="description"
+    content="Homepage der Arma Unit 'Task Force Hellcat'."
+  />
 </svelte:head>
 
 <main bind:this={main}>
@@ -56,7 +59,7 @@
       <li class="home currentpage"><a href="#home">home</a></li>
       <li class="about"><a href="#about">über uns</a></li>
       <li class="wiki"><a href="#wiki">wiki</a></li>
-      <li class="join"><a href="#join">kontakt</a></li>
+      <li class="contact"><a href="#contact">kontakt</a></li>
     </nav>
   </div>
 
@@ -65,7 +68,12 @@
       <source src="/images/bg.mp4" type="video/mp4" />
       Error: Your browser does not support HTML5 video.
     </video>
-    <img id="hero-text" class="noselect reveal" alt="TASK FORCE HELLCAT" src="/images/hero-text.svg" />
+    <img
+      id="hero-text"
+      class="noselect reveal"
+      alt="TASK FORCE HELLCAT"
+      src="/images/hero-text.svg"
+    />
   </section>
   <section id="about">
     <div id="barbed-wire" />
@@ -73,41 +81,52 @@
       <div class="text-block">
         <h2>Über uns</h2>
         <p>
-          Wir sind eine 2021 gegründete Einheit, die Milsim in der von Bohemia Interactive
-          enwtickelten Militärsimulation Arma 3 spielt. Innerhalb des Spiels legen wir einen
-          besonderen Wert auf Strategie, Immersion und einen gemeinschaftlichen Umgang.
-          Zur Steigerung der Immersion und des Realismus setzen wir Modifikationen wie ACE3,
-          ACRE2, KAT und ALiVE ein.
+          Wir sind eine 2021 gegründete Einheit, die Milsim in der von Bohemia
+          Interactive enwtickelten Militärsimulation Arma 3 spielt. Innerhalb
+          des Spiels legen wir einen besonderen Wert auf Strategie, Immersion
+          und einen gemeinschaftlichen Umgang. Zur Steigerung der Immersion und
+          des Realismus setzen wir Modifikationen wie ACE3, ACRE2, KAT und ALiVE
+          ein.
         </p>
       </div>
-      <img src="/images/m90.png" class="drop-shadow" alt="Swedish M90 Soldier" />
+      <img
+        src="/images/m90.png"
+        class="drop-shadow"
+        alt="Swedish M90 Soldier"
+      />
     </div>
   </section>
   <section id="wiki">
     <div class="content">
-      <img src="/images/wiki.png" class="drop-shadow" alt="Swedish M90 Soldier" />
+      <img
+        src="/images/wiki.png"
+        class="drop-shadow"
+        alt="Swedish M90 Soldier"
+      />
       <div class="text-block">
         <h2>Wiki</h2>
         <p>
-          Als handliches Nachschlagewerk dient unser Einheitswiki. 
-          Hier lassen sich eine Vielzahl von Informationen zum Aufbau unserer Einheit, 
-          ihren diversen Rollen, den jeweiligen Ausbildungsinhalten, aber auch das 
+          Als handliches Nachschlagewerk dient unser Einheitswiki. Hier lassen
+          sich eine Vielzahl von Informationen zum Aufbau unserer Einheit, ihren
+          diversen Rollen, den jeweiligen Ausbildungsinhalten, aber auch das
           gesamte benötigte Grundwissen nachlesen.
         </p>
-        <a href="https://wiki.taskforcehellcat.de/"><button>Zum Wiki</button></a>
+        <a href="https://wiki.taskforcehellcat.de/"><button>Zum Wiki</button></a
+        >
       </div>
     </div>
   </section>
 
-  <section id="join">
+  <section id="contact">
     <div class="content">
       <div class="text-block">
         <h2>Kontakt</h2>
         <p>
-          Du möchtest mehr über uns erfahren oder Teil unserer Einheit werden? Trete unserem Discord-Server bei,
-          um mit uns in Kontakt zu treten und dich mit uns auszutauschen. Wir freuen uns darauf, von dir zu hören
-          und dich auf unserem Discord-Server willkommen zu heißen!
-          Benutze die Schaltfläche rechts, um unseren Discord-Server beizutreten.
+          Du möchtest mehr über uns erfahren oder Teil unserer Einheit werden?
+          Trete unserem Discord-Server bei, um mit uns in Kontakt zu treten und
+          dich mit uns auszutauschen. Wir freuen uns darauf, von dir zu hören
+          und dich auf unserem Discord-Server willkommen zu heißen! Benutze die
+          Schaltfläche rechts, um unseren Discord-Server beizutreten.
         </p>
       </div>
       <iframe
