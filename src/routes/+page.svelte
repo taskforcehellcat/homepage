@@ -226,7 +226,7 @@
   }
 
   section {
-    min-height: 100vh;
+    min-height: fit-content;
     font-size: 16pt;
     font-weight: 330;
     line-height: 2;
