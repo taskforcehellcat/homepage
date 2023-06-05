@@ -5,22 +5,25 @@
 <section>
   <div class="impressum">
     <h1>Impressum</h1>
+    <br />
     <p>Angaben gemäß § 5 TMG</p>
+    <br />
     <p>
       Leon Teske <br />
       Neue Reihe 30<br />
       18236 Kröpelin <br />
     </p>
     <p>
-      <strong>Vertreten durch: </strong><br />
-      Leon Teske<br />
+      <br /><strong>Vertreten durch: </strong><br />
+      Leon Teske
     </p>
+    <br />
     <p>
       <strong>Kontakt:</strong> <br />
       E-Mail: <a href="mailto:info@taskforcehellcat.de">info@taskforcehellcat.de</a><br />
     </p>
     <p>
-      <strong>Haftungsausschluss: </strong><br /><br /><strong
+      <br /><strong><hd>Haftungsausschluss: </hd></strong><br /><br /><strong
         >Haftung für Inhalte</strong
       ><br /><br />
       Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
@@ -94,8 +97,16 @@
     padding-block: 12rem;
     padding-inline: 12rem;
 
+    h1 {
+      font-size: 5rem;
+    }
+
     a {
       color: inherit;
+    }
+
+    hd {
+      font-size: 3rem;
     }
   }
 </style>
