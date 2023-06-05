@@ -136,7 +136,7 @@
         class="drop-shadow"
         width="400"
         height="522"
-        allowtransparency="true"
+        allowtransparency={true}
         frameborder="0"
         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
       />
@@ -328,7 +328,7 @@
       height: fit-content;
       width: min(80rem, 90%);
       pointer-events: none;
-      z-index: 100;
+      z-index: 99;
       margin-top: -8rem;
 
       @media screen and (max-height: 600px) {
@@ -365,11 +365,15 @@
       width: 100%;
       height: 100%;
       transition: all 0.2s ease-in-out;
-      width: fit-content;
+      width: 100%;
       padding-inline: 3rem;
 
       &:global(.scrolled) {
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.6));
+        -webkit-filter: drop-shadow(
+          0px 4px 4px rgba(0, 0, 0, 0.6)
+        ); // FIXME this doesn't apply in chromium?
+        backdrop-filter: blur(10px);
       }
 
       li {
