@@ -20,7 +20,9 @@
     <br />
     <p>
       <strong>Kontakt:</strong> <br />
-      E-Mail: <a href="mailto:info@taskforcehellcat.de">info@taskforcehellcat.de</a><br />
+      E-Mail:
+      <a href="mailto:info@taskforcehellcat.de">info@taskforcehellcat.de</a><br
+      />
     </p>
     <p>
       <br /><strong><hd>Haftungsausschluss: </hd></strong><br /><br /><strong
@@ -73,40 +75,83 @@
       der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten
       Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.<br />
     </p>
+    <p>
+      Unsere vollständige Datenschutzerklärung finden Sie <a
+        href="/datenschutzerklaerung">hier</a
+      >.
+    </p>
     <br />
-    Website Impressum erstellt durch
+    Website-Impressum erstellt durch
     <a href="https://www.impressum-generator.de">impressum-generator.de</a>
     von der
     <a href="https://www.kanzlei-hasselbach.de/" rel="nofollow"
       >Kanzlei Hasselbach</a
-    >
+    >.
   </div>
 </section>
 
 <style lang="scss">
   :global(body) {
+    overflow-y: scroll;
     background-color: #012d47;
     color: #fff;
   }
 
   section {
-    width: 100%;
-    height: 100%;
+    width: min(140rem, 100%);
+    height: fit-content;
     font-size: 15pt;
 
     padding-block: 12rem;
     padding-inline: 12rem;
 
+    a {
+      color: inherit;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 2rem;
+    }
     h1 {
       font-size: 5rem;
     }
 
-    a {
-      color: inherit;
+    h2 {
+      font-size: 4rem;
     }
 
-    hd {
-      font-size: 3rem;
+    p {
+      text-align: justify;
+      text-align-last: left;
+      letter-spacing: 0.05rem;
+      margin-bottom: 1rem;
+    }
+
+    ul,
+    ol {
+      padding-left: 3rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
+      list-style-type: '-  ';
+    }
+
+    @media screen and (max-width: 820px) {
+      padding: 2rem;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 2rem;
+      }
     }
   }
 </style>
