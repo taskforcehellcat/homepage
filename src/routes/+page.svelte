@@ -147,6 +147,8 @@
     <span>© 2023 Task Force Hellcat</span>
     &dash;
     <a href="/impressum">Impressum</a>
+    &dash;
+    <a href="/datenschutzerklaerung">Datenschutzerklärung</a>
   </footer>
 </main>
 
