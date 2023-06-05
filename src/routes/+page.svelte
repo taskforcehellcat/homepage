@@ -145,9 +145,7 @@
 
   <footer>
     <span>© 2023 Task Force Hellcat</span>
-    &dash;
     <a href="/impressum">Impressum</a>
-    &dash;
     <a href="/datenschutzerklaerung">Datenschutzerklärung</a>
   </footer>
 </main>
@@ -161,17 +159,25 @@
 
   footer {
     width: 100%;
-    height: 15rem;
+    height: fit-content;
     background-color: #001f31;
     color: #d6d6d6;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     align-items: center;
     font-size: 14pt;
 
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
     a {
       color: inherit;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   }
 
