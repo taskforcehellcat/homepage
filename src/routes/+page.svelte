@@ -155,6 +155,13 @@
     overflow: hidden;
     color: #fff;
     scroll-behavior: smooth;
+
+    /* hide scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   footer {
@@ -324,7 +331,7 @@
 
     #bg-video {
       object-fit: cover;
-      width: min(100%, 1920px);
+      width: 100%;
       height: 100vh;
       pointer-events: none;
       position: relative;
