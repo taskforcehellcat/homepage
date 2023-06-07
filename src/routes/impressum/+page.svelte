@@ -108,20 +108,9 @@
     a {
       color: inherit;
     }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin-top: 2rem;
-    }
+
     h1 {
       font-size: 5rem;
-    }
-
-    h2 {
-      font-size: 4rem;
     }
 
     p {
@@ -131,25 +120,10 @@
       margin-bottom: 1rem;
     }
 
-    ul,
-    ol {
-      padding-left: 3rem;
-    }
-
-    li {
-      margin-bottom: 1rem;
-      list-style-type: '-  ';
-    }
-
     @media screen and (max-width: 820px) {
       padding: 2rem;
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
+      h1 {
         font-size: 2rem;
       }
     }

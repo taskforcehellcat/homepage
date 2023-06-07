@@ -286,7 +286,6 @@
         padding-inline: 5rem;
       }
 
-      h1,
       h2 {
         font-weight: 600;
         text-transform: uppercase;

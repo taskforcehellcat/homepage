@@ -446,9 +446,7 @@
     h1,
     h2,
     h3,
-    h4,
-    h5,
-    h6 {
+    h4 {
       margin-top: 2rem;
     }
     h1 {
@@ -466,8 +464,7 @@
       margin-bottom: 1rem;
     }
 
-    ul,
-    ol {
+    ul {
       padding-left: 3rem;
     }
 
@@ -482,9 +479,7 @@
       h1,
       h2,
       h3,
-      h4,
-      h5,
-      h6 {
+      h4 {
         font-size: 2rem;
       }
     }
