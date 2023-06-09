@@ -330,7 +330,7 @@
 
     #bg-video {
       object-fit: cover;
-      width: 100%;
+      width: min(100%, 2560px);
       height: 100vh;
       pointer-events: none;
       position: relative;
