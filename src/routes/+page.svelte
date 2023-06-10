@@ -121,6 +121,7 @@
   <section id="contact">
     <div class="content">
       <div class="text-block">
+        <!-- TODO this looks bad on mobile -->
         <h2>Kontakt</h2>
         <p>
           Du möchtest mehr über uns erfahren oder Teil unserer Einheit werden?
@@ -176,11 +177,19 @@
     align-items: center;
     font-size: 14pt;
 
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 3rem;
 
     a {
+      display: inline;
       color: inherit;
+      text-decoration: none;
+
+      &::before {
+        content: '·';
+        display: inline-block;
+        color: rgba(255, 255, 255, 0.4);
+        margin-right: 1rem;
+      }
     }
 
     a:hover {
