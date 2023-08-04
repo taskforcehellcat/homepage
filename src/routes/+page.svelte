@@ -61,6 +61,7 @@
       <li class="about"><a href="#about">über uns</a></li>
       <li class="wiki"><a href="#wiki">wiki</a></li>
       <li class="contact"><a href="#contact">kontakt</a></li>
+      <li class="aktuelles"><a href="aktuelles">aktuelles</a></li>
     </nav>
   </div>
 
