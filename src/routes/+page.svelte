@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Slideshow from '$lib/slideshow/Slideshow.svelte';
   import { onMount } from 'svelte';
 
   let navbar: HTMLElement;
@@ -60,6 +61,7 @@
       <li class="home currentpage"><a href="#home">home</a></li>
       <li class="about"><a href="#about">über uns</a></li>
       <li class="wiki"><a href="#wiki">wiki</a></li>
+      <li class="gallery"><a href="#gallery">gallerie</a></li>
       <li class="contact"><a href="#contact">kontakt</a></li>
     </nav>
   </div>
@@ -97,6 +99,7 @@
       />
     </div>
   </section>
+
   <section id="wiki">
     <div class="content">
       <img
@@ -114,6 +117,48 @@
         </p>
         <a href="https://wiki.taskforcehellcat.de/"><button>Zum Wiki</button></a
         >
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="content">
+      <div class="text-block">
+        <h2>Gallerie</h2>
+
+        <Slideshow
+          images={[
+            'https://i.imgur.com/4PYlty1.jpeg',
+            'https://i.imgur.com/7FArUDJ.png',
+            'https://i.imgur.com/xADeVDU.png',
+            'https://i.imgur.com/9jWwSGv.png',
+            'https://i.imgur.com/CHHKs9L.png',
+            'https://i.imgur.com/OQ4fC3t.png',
+            'https://i.imgur.com/HYZNfqT.png',
+            'https://i.imgur.com/XFd1Kev.png',
+            'https://i.imgur.com/lmML9Gj.png',
+            'https://i.imgur.com/2mPVaHS.png',
+            'https://i.imgur.com/RDVxxx7.png',
+            'https://i.imgur.com/noAk29p.png',
+            'https://i.imgur.com/LgGJ6FW.jpeg',
+            'https://i.imgur.com/AuHzrcx.png',
+            'https://i.imgur.com/uq9JJHe.png',
+            'https://i.imgur.com/tnsZITF.jpeg',
+            'https://i.imgur.com/KoIR5la.png',
+            'https://i.imgur.com/RomE94w.jpeg',
+            'https://i.imgur.com/QGFkVNN.png',
+            'https://i.imgur.com/pQtAU1I.jpeg',
+            'https://i.imgur.com/FilqejP.png',
+            'https://i.imgur.com/wW9gZGa.jpeg',
+            'https://i.imgur.com/xASinve.png',
+            'https://i.imgur.com/UsQWty0.jpeg',
+            'https://i.imgur.com/1gNTl4B.png',
+            'https://i.imgur.com/7PqUSKe.jpeg',
+            'https://i.imgur.com/1yn2HMd.png',
+            'https://i.imgur.com/I5YJywg.jpeg',
+            'https://i.imgur.com/WKiDySI.png'
+          ]}
+        />
       </div>
     </div>
   </section>
@@ -358,6 +403,12 @@
     }
   }
 
+  section#gallery {
+    .text-block {
+      width: 100%;
+    }
+  }
+
   section#wiki {
     a {
       margin-top: 1rem;
@@ -375,7 +426,7 @@
     position: fixed;
     display: flex;
     justify-content: center;
-    font-size: min(15pt, 5vw);
+    font-size: min(15pt, 3vw);
     z-index: 100;
 
     nav {
