@@ -2,15 +2,15 @@
   "name": "tfhc-homepage",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "yarn run format & vite dev",
     "build": "vite build",
     "package": "svelte-kit package",
     "preview": "vite preview",
     "prepare": "svelte-kit sync",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "prettier --check --plugin-search-dir=. . && eslint .",
-    "format": "prettier --write --plugin-search-dir=. .",
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write --list-different .",
     "preinstall": "npx only-allow yarn"
   },
   "devDependencies": {
@@ -37,9 +37,8 @@
   "dependencies": {
     "@fontsource/fira-mono": "^5.0.2",
     "@sveltejs/vite-plugin-svelte": "^3.1.0",
-    "cookie": "^0.5.0",
-    "kit-monorepo": "github:sveltejs/kit",
+    "cookie": "^0.6.0",
     "only-allow": "^1.2.1"
   },
-  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+  "packageManager": "yarn@4.9.1"
 }
