@@ -22,8 +22,8 @@
     "@typescript-eslint/parser": "^7.7.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
-    "prettier-plugin-svelte": "^3.2.3",
     "prettier": "^3.2.5",
+    "prettier-plugin-svelte": "^3.2.3",
     "sass": "^1.76.0",
     "svelte": "^4.2.15",
     "svelte-check": "^3.7.1",
@@ -40,5 +40,6 @@
     "cookie": "^0.5.0",
     "kit-monorepo": "github:sveltejs/kit",
     "only-allow": "^1.2.1"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
