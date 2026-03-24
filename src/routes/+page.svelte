@@ -212,7 +212,6 @@
     font-style: inherit;
     font-family: inherit;
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
     align-items: center;
     border: 1px solid #212325;
@@ -232,10 +231,6 @@
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.3));
   }
 
-  main::-webkit-scrollbar {
-    display: none;
-  }
-
   main {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -243,6 +238,10 @@
     overflow-x: hidden;
     height: 100%;
     font-family: 'GeneralSans-Variable';
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   section {
@@ -252,7 +251,6 @@
     line-height: 2;
     letter-spacing: 0.1rem;
     background: #012d47;
-    // background: linear-gradient(0deg, rgba(21, 64, 73, 1) 0%, rgba(21, 64, 73, 1) 90%, rgba(0, 0, 0, 1) 100%);
 
     &:nth-child(even) {
       background-color: #001f31;
@@ -310,10 +308,8 @@
     }
 
     #barbed-wire {
-      --height: 10rem;
       width: 100%;
-      // background-color: lime;
-      height: var(--height);
+      height: 10rem;
       transform: translateY(-50%);
       background-image: url('/images/barbed-wire.svg');
       background-position-x: 4rem;
@@ -382,14 +378,10 @@
       width: 100%;
       height: 100%;
       transition: all 0.2s ease-in-out;
-      width: 100%;
       padding-inline: 3rem;
 
       &:global(.scrolled) {
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.6));
-        -webkit-filter: drop-shadow(
-          0px 4px 4px rgba(0, 0, 0, 0.6)
-        ); // FIXME this doesn't apply in chromium?
         backdrop-filter: blur(10px);
       }
 
@@ -404,7 +396,6 @@
           height: 2px;
           background-color: #fff;
           margin-bottom: -2px;
-          transition: width 2s ease-in-out;
           animation: expandX 0.5s;
           margin-inline: auto;
         }
