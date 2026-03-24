@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { resolve } from '$app/paths';
+</script>
+
 <svelte:head>
   <title>Impressum | Task Force Hellcat</title>
 </svelte:head>
@@ -101,7 +105,7 @@
     </p>
     <p>
       Unsere vollständige Datenschutzerklärung finden Sie <a
-        href="/datenschutzerklaerung">
+        href={resolve('/datenschutzerklaerung')}>
         hier
       </a>
       .

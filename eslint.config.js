@@ -20,6 +20,12 @@ export default ts.config(
     }
   },
   {
+    files: ['**/*.svelte', '**/*.ts'],
+    rules: {
+      'no-undef': 'off'
+    }
+  },
+  {
     files: ['**/*.svelte'],
     languageOptions: {
       parserOptions: {

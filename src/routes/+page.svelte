@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { resolve } from '$app/paths';
 
   let navbar: HTMLElement;
   let navbox: HTMLElement;
@@ -75,7 +76,7 @@
       src="/images/hero-text.svg" />
   </section>
   <section id="about">
-    <div id="barbed-wire" />
+    <div id="barbed-wire"></div>
     <div class="content">
       <div class="text-block">
         <h2>Über uns</h2>
@@ -136,14 +137,15 @@
         height="522"
         allowtransparency={true}
         frameborder="0"
-        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" />
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+      </iframe>
     </div>
   </section>
 
   <footer>
     <span>© 2023 Task Force Hellcat</span>
-    <a href="/impressum">Impressum</a>
-    <a href="/datenschutzerklaerung">Datenschutzerklärung</a>
+    <a href={resolve('/impressum')}>Impressum</a>
+    <a href={resolve('/datenschutzerklaerung')}>Datenschutzerklärung</a>
   </footer>
 </main>
 
