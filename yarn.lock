@@ -841,15 +841,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/cookie@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@types/cookie@npm:1.0.0"
-  dependencies:
-    cookie: "npm:*"
-  checksum: 10c0/d471539d289c6d9c6ab2986a881b10a55c9e489c2d35da0d1bdbbabdca9a8125de4cbc007bb525060265c64c14288c690f991ba6d84eea8c6ddacaa150179557
-  languageName: node
-  linkType: hard
-
 "@types/esrecurse@npm:^4.3.1":
   version: 4.3.1
   resolution: "@types/esrecurse@npm:4.3.1"
@@ -1224,17 +1215,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cookie@npm:*, cookie@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "cookie@npm:1.1.1"
-  checksum: 10c0/79c4ddc0fcad9c4f045f826f42edf54bcc921a29586a4558b0898277fa89fb47be95bc384c2253f493af7b29500c830da28341274527328f18eba9f58afa112c
-  languageName: node
-  linkType: hard
-
 "cookie@npm:^0.6.0":
   version: 0.6.0
   resolution: "cookie@npm:0.6.0"
   checksum: 10c0/f2318b31af7a31b4ddb4a678d024514df5e705f9be5909a192d7f116cfb6d45cbacf96a473fa733faa95050e7cff26e7832bb3ef94751592f1387b71c8956686
+  languageName: node
+  linkType: hard
+
+"cookie@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "cookie@npm:1.1.1"
+  checksum: 10c0/79c4ddc0fcad9c4f045f826f42edf54bcc921a29586a4558b0898277fa89fb47be95bc384c2253f493af7b29500c830da28341274527328f18eba9f58afa112c
   languageName: node
   linkType: hard
 
@@ -2983,7 +2974,6 @@ __metadata:
     "@sveltejs/adapter-netlify": "npm:^6.0.4"
     "@sveltejs/kit": "npm:^2.55.0"
     "@sveltejs/vite-plugin-svelte": "npm:^7.0.0"
-    "@types/cookie": "npm:^1.0.0"
     cookie: "npm:^1.1.1"
     eslint: "npm:^10.1.0"
     eslint-config-prettier: "npm:^10.1.8"
