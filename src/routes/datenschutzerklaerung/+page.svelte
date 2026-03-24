@@ -147,8 +147,7 @@
     letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.
   </p>
   <h3
-    id="allgemeine-hinweise-zu-den-rechtsgrundlagen-der-datenverarbeitung-auf-dieser-website"
-  >
+    id="allgemeine-hinweise-zu-den-rechtsgrundlagen-der-datenverarbeitung-auf-dieser-website">
     Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser
     Website
   </h3>
@@ -199,8 +198,7 @@
     Datenverarbeitung bleibt vom Widerruf unberührt.
   </p>
   <h3
-    id="widerspruchsrecht-gegen-die-datenerhebung-in-besonderen-f-llen-sowie-gegen-direktwerbung-art-21-dsgvo-"
-  >
+    id="widerspruchsrecht-gegen-die-datenerhebung-in-besonderen-f-llen-sowie-gegen-direktwerbung-art-21-dsgvo-">
     Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen
     Direktwerbung (Art. 21 DSGVO)
   </h3>
@@ -418,11 +416,14 @@
   <p>
     Weitere Informationen über Datenschutz bei YouTube finden Sie in deren
     Datenschutzerklärung unter: <a
-      href="https://policies.google.com/privacy?hl=de"
-      >https://policies.google.com/privacy?hl=de</a
-    >.
+      href="https://policies.google.com/privacy?hl=de">
+      https://policies.google.com/privacy?hl=de
+    </a>
+    .
   </p>
-  <p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
+  <p>
+    Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
+  </p>
 </section>
 
 <style lang="scss">

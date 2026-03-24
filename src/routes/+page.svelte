@@ -50,8 +50,7 @@
   <title>Home | Task Force Hellcat</title>
   <meta
     name="description"
-    content="Homepage der Arma Unit 'Task Force Hellcat'."
-  />
+    content="Homepage der Arma Unit 'Task Force Hellcat'." />
 </svelte:head>
 
 <main bind:this={main}>
@@ -73,8 +72,7 @@
       id="hero-text"
       class="noselect reveal"
       alt="TASK FORCE HELLCAT"
-      src="/images/hero-text.svg"
-    />
+      src="/images/hero-text.svg" />
   </section>
   <section id="about">
     <div id="barbed-wire" />
@@ -93,8 +91,7 @@
       <img
         src="/images/m90.png"
         class="drop-shadow"
-        alt="Swedish M90 Soldier"
-      />
+        alt="Swedish M90 Soldier" />
     </div>
   </section>
   <section id="wiki">
@@ -102,8 +99,7 @@
       <img
         src="/images/wiki.png"
         class="drop-shadow"
-        alt="Swedish M90 Soldier"
-      />
+        alt="Swedish M90 Soldier" />
       <div class="text-block">
         <h2>Wiki</h2>
         <p>
@@ -112,8 +108,9 @@
           diversen Rollen, den jeweiligen Ausbildungsinhalten, aber auch das
           gesamte benötigte Grundwissen nachlesen.
         </p>
-        <a href="https://wiki.taskforcehellcat.de/"><button>Zum Wiki</button></a
-        >
+        <a href="https://wiki.taskforcehellcat.de/">
+          <button>Zum Wiki</button>
+        </a>
       </div>
     </div>
   </section>
@@ -139,8 +136,7 @@
         height="522"
         allowtransparency={true}
         frameborder="0"
-        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-      />
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" />
     </div>
   </section>
 
