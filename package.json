@@ -33,6 +33,11 @@
     "vite": "^8.0.11"
   },
   "type": "module",
+  "overrides": {
+    "@sveltejs/kit": {
+      "cookie": "^0.7.0"
+    }
+  },
   "dependencies": {
     "@fontsource/fira-mono": "^5.2.7",
     "cookie": "^1.1.1",
